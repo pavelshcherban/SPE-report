@@ -10,7 +10,7 @@ class SpeReport:
         spefile = SpeFile(filename)
         head = {'filename':filename}
         for field_name, field_type in spefile.header._fields_:
-            print(field_name, getattr(spefile.header, field_name))
+            # print(field_name, getattr(spefile.header, field_name))
             head[field_name] = getattr(spefile.header, field_name)
         self.headers.append(head)
 
